@@ -17,30 +17,30 @@ pipeline {
         }
         stage('Clean') {
             steps {
-                sh 'gradlew clean'
+                sh './gradlew clean'
                 // on Unix/Linux/MacOS, use the Bourne shell with sh
-                // sh 'gradlew clean'
+                // sh './gradlew clean'
             }
         }
         stage('Build') {
             steps {
-                sh 'gradlew build'
+                sh './gradlew build'
                 // on Unix/Linux/MacOS, use the Bourne shell with sh
-                // sh 'gradlew build'
+                // sh './gradlew build'
             }
         }
         stage('Test') {
             steps {
-                sh 'gradlew test'
+                sh './gradlew test'
                 // on Unix/Linux/MacOS, use the Bourne shell with sh
-                // sh 'gradlew test'
+                // sh './gradlew test'
             }
         }
         stage('Checkstyle') {
             steps {
-                sh 'gradlew checkstyleMain'
+                sh './gradlew checkstyleMain'
                 // on Unix/Linux/MacOS, use the Bourne shell with sh
-                // sh 'gradlew checkstyleMain'
+                // sh './gradlew checkstyleMain'
             }
         }
         stage('Shadow Jar') {
@@ -48,9 +48,9 @@ pipeline {
                 branch 'main'
             }
             steps {
-                sh 'gradlew shadowJar'
+                sh './gradlew shadowJar'
                 // on Unix/Linux/MacOS, use the Bourne shell with sh
-                // sh 'gradlew shadowJar'
+                // sh './gradlew shadowJar'
             }
         }
     }

@@ -11,6 +11,7 @@ pipeline {
         stage('Environment Check') {
             steps {
                 sh 'java -version'
+                sh 'chmod +x gradlew'
                 // on Unix/Linux/MacOS, use the Bourne shell with sh
                 //sh 'java -version'
             }

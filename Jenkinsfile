@@ -7,6 +7,15 @@ pipeline {
         }
     }*/
 
+    triggers {
+        GenericTrigger(
+            causeString: 'Triggered by GitHub webhook',
+            printPostContent: true,
+            printContributedVariables: true
+        )
+    }
+
+
     stages {
         stage('Environment Check') {
             steps {

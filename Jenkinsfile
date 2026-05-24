@@ -9,6 +9,7 @@ pipeline {
 
     triggers {
         GenericTrigger(
+            token: 'simple-calculator-token',
             causeString: 'Triggered by GitHub webhook',
             printPostContent: true,
             printContributedVariables: true
